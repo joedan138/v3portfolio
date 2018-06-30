@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Jordan Lee Projects</title>
+	<meta name="description" content="In this tutorial, I'm going to show you how to create portfolio page with filtering and also hover effect for each of your project. We will be using a CSS3 and jQuery filter & sort plugin called MixItUp.">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="assets/css/normalize.css">
+	<link rel="stylesheet" href="assets/css/layout.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>a
+	<![endif]-->
+
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+	 crossorigin="anonymous"></script>
+	<script type="text/javascript" src="assets/js/jquery.mixitup.min.js"></script>
+
+
+
+	<script type="text/javascript">
+		$(function () {
+
+			var filterList = {
+
+				init: function () {
+
+					// MixItUp plugin
+					// http://mixitup.io
+					$('#portfoliolist').mixItUp({
+						selectors: {
+							target: '.portfolio',
+							filter: '.filter'
+						},
+						load: {
+							filter: '.cli, .fullStack, .games, .group'
+						}
+					});
+
+				}
+
+			};
+
+			// Run the show!
+			filterList.init();
+
+
+		});	
+	</script>
+
+</head>
+
+<body>
+
+	<div class="header">
+		<div class="header-right">
+			<a href="home">Home</a>
+			<a href="projects">Projects</a>
+			<a href="contact">Contact</a>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="container">
+
+		<ul id="filters" class="clearfix">
+			<li>
+				<span class="filter active" data-filter=".cli, .fullStack, .games, .group">All</span>
+			</li>
+			<li>
+				<span class="filter" data-filter=".cli">CLI-Node</span>
+			</li>
+			<li>
+				<span class="filter" data-filter=".fullStack">Full Stack</span>
+			</li>
+			<li>
+				<span class="filter" data-filter=".games">Games</span>
+			</li>
+			<li>
+				<span class="filter" data-filter=".group">Group Project</span>
+			</li>
+		</ul>
+
+		<div id="portfoliolist">
+
+			<div class="portfolio cli" data-cat="cli">
+				<div class="portfolio-wrapper">
+					<img src="img2/CLI/ebay_knockoff.PNG" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Ghetto Ebay</a>
+							<span class="text-category">Think Oregon Trail meets Ebay</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio group" data-cat="group">
+				<div class="portfolio-wrapper">
+					<img src="img2/Group Project/awair.PNG" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">awAIR</a>
+							<span class="text-category">Group project for the U of U Children's Hospital</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio fullStack" data-cat="fullStack">
+				<div class="portfolio-wrapper">
+					<img src="img2/Full Stack/buscador.PNG" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Buscador de Amigos</a>
+							<span class="text-category">Take a survey, find a friend</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio group" data-cat="group">
+				<div class="portfolio-wrapper">
+					<img src="img2/Group Project/out_n_go.PNG" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Out-N-Go</a>
+							<span class="text-category">Easily find hiking trails and weather conditions by zip code</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio fullStack" data-cat="fullStack">
+				<div class="portfolio-wrapper">
+					<img src="img2/Full Stack/mongo_scraper.PNG" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Mongo NYT Scraoer</a>
+							<span class="text-category">Full stack app that scrapes New York Times articles</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio games" data-cat="games">
+				<div class="portfolio-wrapper">
+					<img src="img2/Games/trivia_game.PNG" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Space Trivia</a>
+							<span class="text-category">Test your brain on 5th grade space facts</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio games" data-cat="games">
+				<div class="portfolio-wrapper">
+					<img src="img2/Games/giffin.PNG" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Giffin Ain't Easy</a>
+							<span class="text-category">Fun game that lets you peruse GIF's</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio games" data-cat="games">
+				<div class="portfolio-wrapper">
+					<img src="img2/Games/magic_gems.PNG" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Magic Gems</a>
+							<span class="text-category">Number guessing game</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio fullStack" data-cat="fullStack">
+				<div class="portfolio-wrapper">
+					<img src="img2/Full Stack/burger.PNG" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Merica Burger</a>
+							<span class="text-category">Live the American dream and create your own burgers</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio cli" data-cat="cli">
+				<div class="portfolio-wrapper">
+					<img src="img2/CLI/liri.PNG" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Liri</a>
+							<span class="text-category">If Siri was a chatbot with 4 functions, you'd have Liri</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio games" data-cat="games">
+				<div class="portfolio-wrapper">
+					<img src="img2/Games/hangman.PNG" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Hangman</a>
+							<span class="text-category">Classic hangman with a wild west feel</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portfolio fullStack" data-cat="fullStack">
+				<div class="portfolio-wrapper">
+					<img src="img2/Full Stack/train.PNG" alt="" />
+					<div class="label">
+						<div class="label-text">
+							<a class="text-title">Train Scheduler</a>
+							<span class="text-category">Show Cornelius "Commodore" Vanderbilt how trains are really supposed to run</span>
+						</div>
+						<div class="label-bg"></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- container -->
+
+</body>
+
+</html>
